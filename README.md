@@ -21,7 +21,7 @@ You can create each type through the following command: `conda env create --file
 
 ## Steps
 1. Activate the rnaseq environment: `conda activate rnaseq`
-2. Run `. src/run_fastqc.sh` to perform quality assessment of fastqc files. The results (1 HTML and 1 fastqc file for each fastq sample) will be stored in `data/quality_control`.
+2. Run `. src/quality_control.sh` to perform quality assessment of fastqc files. The results (1 HTML and 1 fastqc file for each fastq sample) will be stored in `data/quality_control`.
 3. You can open the HTML files in your browser to view each sample's FastQC report: ![fastqc](/supporting_figures/fastqc_report.png?raw=true "FastQC Report")
 4. Run `. src/build_index.sh` to build an index from the reference fasta using Kallisto. The index file will be stored in `data/reference`.
 5. Run `. src/mapping.sh` to map single-end data onto each fastq file, using Kallisto quant. Results (including logs) will be stored in `data/mapping`.
