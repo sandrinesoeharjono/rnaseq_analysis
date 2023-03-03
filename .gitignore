@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Extra
+.DS_Store
+
+# Fastq files
+*fastq.gz
+*.fa
