@@ -40,6 +40,7 @@ vignettes/*.pdf
 
 # Extra
 .DS_Store
+readMapping.sh
 
 # Fastq files
 *fastq.gz
