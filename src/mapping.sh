@@ -24,6 +24,7 @@ for FASTQ_FILE in data/raw/*; do
         -s 30 \
         ${FASTQ_FILE} \
         &> data/mapping/${SAMPLE}.log;
+    # The &> at the end writes the command-line logs to a file
 
     echo "-> Mapped ${SAMPLE} to reference.";
 done

@@ -19,12 +19,12 @@ You can create each type through the following command: `conda env create --file
     - Download the latest Homo sapiens cDNA from here: https://useast.ensembl.org/info/data/ftp/index.html
     - Place the file in the `data/reference` folder.
 
-## Steps
+## Analysis Steps
+Through the command line:
 1. Activate the rnaseq environment: `conda activate rnaseq`
-2. Run `. src/quality_control.sh` to perform quality assessment of fastqc files. The results (1 HTML and 1 fastqc file for each fastq sample) will be stored in `data/quality_control`.
-3. You can open the HTML files in your browser to view each sample's FastQC report: ![fastqc](/supporting_figures/fastqc_report.png?raw=true "FastQC Report")
-4. Run `. src/build_index.sh` to build an index from the reference fasta using Kallisto. The index file will be stored in `data/reference`.
-5. Run `. src/mapping.sh` to map single-end data onto each fastq file, using Kallisto quant. Results (including logs) will be stored in `data/mapping`.
-6. Run `multiqc -d data` to summarize outputs with multiQC. It will generate 1 summary HTML and 1 folder. The summary will ressemble this: ![multiqc](/supporting_figures/multiqc_report.png?raw=true "MultiQC Report")
+2. Run `. src/quality_control.sh` to check the quality of the fastq files. The results (1 HTML and 1 fastqc file for each fastq sample) will be stored in `data/quality_control`. You can open the HTML files in your browser to view each sample's FastQC report: ![fastqc](/supporting_figures/fastqc_report.png?raw=true "FastQC Report")
+3. Run `. src/build_index.sh` to build an index from the reference Human fasta file. The resulting index file will be stored in `data/reference`.
+4. Run `. src/mapping.sh` to the map the reads (single-end data) onto the reference transcriptome. Results (including logs) will be stored in `data/mapping`.
+5. Run `multiqc -d data` to summarize the FastQC and Kallisto outputs in a single summary HTML using MultiQC. It will generate 1 summary HTML and 1 folder. The summary will ressemble this: ![multiqc](/supporting_figures/multiqc_report.png?raw=true "MultiQC Report")
 
  
