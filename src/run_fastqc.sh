@@ -1,7 +1,3 @@
-#!/bin/sh
-
-# Run this file using "sh run_fastqc.sjh"
-
-# Perform quality assessment of fastq files using 'fastqc'
-# Command: fastqc [filename.fastq.gz]
-fastqc data/*.fastq.gz -t 8
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ca89670d5d2ceff699b250b9febd8e4ba7164b96b818f653405e9322289a8f5
+size 336
