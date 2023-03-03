@@ -44,4 +44,13 @@ readMapping.sh
 
 # Fastq files
 *fastq.gz
+
+# Reference file
 *.fa
+*.index
+
+# Quality control folder
+data/quality_control/*
+
+# Data mapping folder
+data/mapping/*
