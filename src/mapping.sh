@@ -18,7 +18,7 @@ for FASTQ_FILE in data/raw/*; do
     kallisto quant \
         -i data/reference/Homo_sapiens.GRCh38.cdna.all.index \
         -o data/mapping/${SAMPLE} \
-        -t 8 \
+        -t 2 \
         --single \
         -l 250 \
         -s 30 \
